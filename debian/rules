@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DPKG_GENSYMBOLS_CHECK_LEVEL=4
+
+# needed for tests
+export COLUMBUS_DATADIR=$(CURDIR)/share
+
+# http://ccache.samba.org/manual.html#_precompiled_headers
+export CCACHE_SLOPPINESS=time_macros
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_BUILD_TYPE=''
+
+override_dh_install:
+	dh_install --fail-missing

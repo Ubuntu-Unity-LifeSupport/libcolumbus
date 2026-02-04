@@ -1,0 +1,373 @@
+libcolumbus (1.1.0+15.10.20150806-0ubuntu39) resolute; urgency=medium
+
+  * No-change rebuild for boost 1.90.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 04 Feb 2026 14:18:48 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu38) resolute; urgency=medium
+
+  * No-change rebuild for icu soname.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 02 Dec 2025 22:48:59 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu37) questing; urgency=medium
+
+  * No-change rebuild for boost 1.88.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 06 Aug 2025 17:08:32 +0200
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu36) questing; urgency=medium
+
+  * No-change rebuild for boost 1.88.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 06 Aug 2025 16:58:07 +0200
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu35) plucky; urgency=medium
+
+  * Remove one symbol from symbols file, specific to armhf and riscv64.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 06 Jan 2025 12:08:53 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu33) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 01:52:20 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu32) noble; urgency=medium
+
+  * No-change rebuild against libboost-python1.83.0-py312
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 24 Mar 2024 19:47:46 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu31) noble; urgency=medium
+
+  * No-change rebuild for ICU soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 19 Dec 2023 11:06:32 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu30) lunar; urgency=medium
+
+  * Rebuild against latest icu
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 04 Feb 2023 10:45:58 -0500
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu29) kinetic; urgency=medium
+
+  * Update libcolumbus1v5.symbols for armhf and riscv64
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 03 Sep 2022 20:00:58 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu28) kinetic; urgency=medium
+
+  * No-change rebuild to pick up fixed libboost-python dependencies
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 03 Sep 2022 13:11:36 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu27) kinetic; urgency=medium
+
+  * No-change rebuild against latest icu
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 29 Apr 2022 08:05:16 -0400
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu26) jammy; urgency=medium
+
+  * Fix FTBFS with python 3.10
+
+ -- William 'jawn-smith' Wilson <jawn-smith@ubuntu.com>  Wed, 09 Feb 2022 13:55:43 -0600
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu25) jammy; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 09 Feb 2022 05:39:41 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu24) hirsute; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 12 Dec 2020 13:07:33 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu23) hirsute; urgency=medium
+
+  * No-change rebuild to build with python3.9 as default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 19 Nov 2020 18:33:00 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu22) groovy; urgency=medium
+
+  * No change rebuild against new icu ABI.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 27 Jul 2020 16:42:27 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu21) focal; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 03 Mar 2020 21:33:06 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu20) focal; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 13 Feb 2020 08:59:17 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu19) focal; urgency=medium
+
+  * No change rebuild against new boost1.71 ABI
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 03 Feb 2020 20:42:36 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu18) focal; urgency=medium
+
+  * Fix name of the boost-python library some more. 
+
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 27 Jan 2020 14:01:32 +1300
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu17) focal; urgency=medium
+
+  * No-change rebuild to build with python3.8.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 25 Jan 2020 04:33:09 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu16) disco; urgency=medium
+
+  * No-change rebuild for icu soname changes.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 13 Nov 2018 08:14:22 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu15) disco; urgency=medium
+
+  * Fix name of the boost_python library.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 01 Nov 2018 12:06:17 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu14) disco; urgency=medium
+
+  * No-change rebuild for Python 3.7 as the default Python3.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 31 Oct 2018 13:54:52 +0100
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu13) cosmic; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 17 Jul 2018 12:57:49 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu12) bionic; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 07 Nov 2017 08:53:19 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu11) bionic; urgency=medium
+
+  * libcolumbus is compiled with hidden visiblity by default, make sure
+    boost python uses gcc visibility attribute to export the python module
+    init function, as otherwise columbus python module fails to
+    import. Fixes FTBFS with boost1.65. This is a bug in boost, as it
+    should be auto-detecting this, like it did in previous releases.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 30 Oct 2017 11:06:32 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu10) bionic; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 26 Oct 2017 19:49:44 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu9) bionic; urgency=medium
+
+  * No-change rebuild for libicu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 25 Oct 2017 15:41:32 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu8) artful; urgency=medium
+
+  * No-change rebuild to build with python3.6.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 24 Jul 2017 13:51:30 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu7) zesty; urgency=high
+
+  * No change rebuild against boost1.62.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 01 Nov 2016 16:26:07 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu6) yakkety; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 04 Aug 2016 08:20:29 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu5) yakkety; urgency=medium
+
+  * No-change rebuild for libicu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 22 Apr 2016 22:54:49 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu4) xenial; urgency=medium
+
+  * Add s390x to the 64-bitish symbols.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 24 Nov 2015 23:31:04 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu3) xenial; urgency=medium
+
+  * No-change rebuild for python3 defaults change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 23 Oct 2015 10:39:41 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu2) wily; urgency=medium
+
+  * Fix symbols file to generate dependencies against the correct 
+    package name.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 08 Aug 2015 23:32:12 +0000
+
+libcolumbus (1.1.0+15.10.20150806-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+
+  [ Iain Lane ]
+  * Rename packages for g++5 ABI break
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 06 Aug 2015 09:15:23 +0000
+
+libcolumbus (1.1.0+14.04.20140325.3-0ubuntu1) trusty; urgency=low
+
+  [ Jussi Pakkanen ]
+  * Add symbol versioning.
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+  * debian/*symbols: auto-update new symbols to released version
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 25 Mar 2014 19:36:23 +0000
+
+libcolumbus (1.1.0+14.04.20140306-0ubuntu1) trusty; urgency=medium
+
+  [ Jussi Pakkanen ]
+  * New online search mode
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Mar 2014 13:06:03 +0000
+
+libcolumbus (1.0.0+14.04.20140120-0ubuntu1) trusty; urgency=low
+
+  * New rebuild forced
+  * Automatic snapshot from revision 459
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 20 Jan 2014 19:43:49 +0000
+
+libcolumbus (1.0.0+14.04.20140108-0ubuntu1) trusty; urgency=low
+
+  [ Jussi Pakkanen ]
+  * Fail early if temporary file can't be created.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 458
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 08 Jan 2014 03:20:54 +0000
+
+libcolumbus (1.0.0+13.10.20130814.1-0ubuntu3) trusty; urgency=medium
+
+  * No change rebuild against libicu52
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 27 Dec 2013 04:23:13 +0000
+
+libcolumbus (1.0.0+13.10.20130814.1-0ubuntu2) trusty; urgency=low
+
+  * No change rebuild for Boost 1.54 transition.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Tue, 22 Oct 2013 15:36:59 +0100
+
+libcolumbus (1.0.0+13.10.20130814.1-0ubuntu1) saucy; urgency=low
+
+  * Automatic snapshot from revision 454
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 14 Aug 2013 15:20:10 +0000
+
+libcolumbus (1.0.0+13.10.20130814-0ubuntu1) saucy; urgency=low
+
+  [ Mathieu Trudel-Lapierre ]
+  * Release new upstream version, bump to ABI 1
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 452
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 14 Aug 2013 10:09:26 +0000
+
+libcolumbus (0.5.0daily13.06.06-0ubuntu1) saucy; urgency=low
+
+  [ Jussi Pakkanen ]
+  * Reduce the default amount of fuzziness. (LP: #1159812)
+
+  [ Timo Jyrinki ]
+  * Use -DCMAKE_BUILD_TYPE='' in debian/rules (LP: #1187771) This
+    workaround fixes the issue for now. (LP: #1187771)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 450
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Jun 2013 05:33:20 +0000
+
+libcolumbus (0.5.0daily13.05.23ubuntu.unity.next-0ubuntu1) raring; urgency=low
+
+  [ Jussi Pakkanen ]
+  * Bump version number to prepare for new work
+  * Reduce the default amount of fuzziness. (LP: #1159812)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 446 (ubuntu-unity/next)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 23 May 2013 03:01:05 +0000
+
+libcolumbus (0.4.0daily13.04.16~13.04-0ubuntu2) saucy; urgency=low
+
+  * No change rebuild for Boost 1.53 transition.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Fri, 26 Apr 2013 19:18:42 +0100
+
+libcolumbus (0.4.0daily13.04.16~13.04-0ubuntu1) raring; urgency=low
+
+  [ Jussi Pakkanen ]
+  * search in application lens is innacurate (LP: #1159812)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 443
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 16 Apr 2013 05:47:15 +0000
+
+libcolumbus (0.4.0daily13.04.15-0ubuntu1) raring; urgency=low
+
+  * Automatic snapshot from revision 443
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 15 Apr 2013 02:03:10 +0000
+
+libcolumbus (0.4.0daily13.02.19-0ubuntu1) raring; urgency=low
+
+  * Automatic snapshot from revision 441
+
+ -- Automatic PS uploader <ps-jenkins@lists.canonical.com>  Tue, 19 Feb 2013 02:01:48 +0000
+
+libcolumbus (0.4.0daily13.02.14-0ubuntu1) raring; urgency=low
+
+  [ Jussi Pakkanen ]
+  * Initial release
+
+  [ Didier Roche ]
+  * Fix the packaging to be in an acceptable shape to enter ubuntu
+  * Automatic snapshot from revision 1 (bootstrap)
+
+  [ Michael Terry ]
+  * Rename python bindings (LP: #1122372)
+
+  [ Automatic PS uploader ]
+  * Automatic snapshot from revision 438
+
+ -- Automatic PS uploader <ps-jenkins@lists.canonical.com>  Thu, 14 Feb 2013 06:24:41 +0000

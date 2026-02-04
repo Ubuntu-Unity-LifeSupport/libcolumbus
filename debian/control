@@ -1,0 +1,60 @@
+Source: libcolumbus
+Section: libs
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9~),
+               cmake,
+               pkg-config,
+               libicu-dev,
+               python3-dev,
+               libboost-python-dev,
+               libsparsehash-dev,
+Standards-Version: 3.9.4
+Homepage: https://launchpad.net/libcolombus
+Vcs-Bzr: https://code.launchpad.net/~canonical-product-strategy/libcolumbus/trunk
+
+Package: libcolumbus1v5
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libcolumbus1-common (= ${source:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+Conflicts: libcolumbus1
+Replaces: libcolumbus1
+Description: error tolerant matching engine - shared library
+ Libcolumbus is a search engine designed to work with unclean data.
+
+Package: libcolumbus1-common
+Section: libs
+Architecture: all
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: error tolerant matching engine - common files
+ Libcolumbus is a search engine designed to work with unclean data.
+ .
+ This package contains the common files to have the library working.
+
+Package: libcolumbus1-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libcolumbus1v5 (= ${binary:Version}),
+         ${misc:Depends},
+Description: error tolerant matching engine - development files
+ Libcolumbus is a search engine designed to work with unclean data.
+ .
+ This package contains files that are needed to build applications.
+
+Package: python3-columbus
+Section: python
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libcolumbus1v5 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: error tolerant matching engine - Python bindings
+ These are the Python bindings of libcolumbus.

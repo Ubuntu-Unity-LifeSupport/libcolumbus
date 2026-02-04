@@ -1,0 +1,189 @@
+libcolumbus.so.1 libcolumbus1v5 #MINVER#
+ (c++)"Columbus::ErrorValues::addAccents(Columbus::accentGroups)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::clearErrors()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::setGroupError(Columbus::Word const&, int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::setSubstringMode()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::addKeyboardErrors()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::addStandardErrors()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::addNumberpadErrors()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::setError(unsigned short, unsigned short, int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::isInGroup(unsigned short)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::ErrorValues()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::~ErrorValues()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexMatches::clear()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexMatches::IndexMatches()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexMatches::~IndexMatches()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexWeights::setWeight(Columbus::Word const&, double)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexWeights::IndexWeights()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexWeights::~IndexWeights()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::addResults(Columbus::MatchResults const&)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::MatchResults::copyResult(Columbus::MatchResults const&, unsigned long)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::MatchResults::copyResult(Columbus::MatchResults const&, unsigned int)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::MatchResults::addResult(unsigned long, double)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::MatchResults::addResult(unsigned int, double)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults(Columbus::MatchResults&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults(Columbus::MatchResults const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults(Columbus::MatchResults&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults(Columbus::MatchResults const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::MatchResults()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::~MatchResults()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::operator=(Columbus::MatchResults&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::operator=(Columbus::MatchResults const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ResultFilter::addNewTerm()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ResultFilter::addNewSubTerm(Columbus::Word const&, Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ResultFilter::ResultFilter()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ResultFilter::~ResultFilter()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::splitToWords(char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::hiresTimestamp()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::insertWord(Columbus::Word const&, unsigned int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::getDefaultError()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::LevenshteinIndex()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::~LevenshteinIndex()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::setDynamic(bool)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::getResultFilter()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::addNonsearchingField(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::SearchParameters()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::~SearchParameters()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(Columbus::Word&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::Word::Word(unsigned short*, unsigned long)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::Word::Word(unsigned short*, unsigned int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(Columbus::Word&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::Word::Word(unsigned short*, unsigned long)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::Word::Word(unsigned short*, unsigned int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::Word()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::~Word()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator=(Columbus::Word&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator=(char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator=(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Corpus::addDocument(Columbus::Document const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Corpus::Corpus()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Corpus::~Corpus()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::onlineMatch(Columbus::WordList const&, Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::getErrorValues()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::getIndexWeights()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::index(Columbus::Corpus const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::match(char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::match(char const*, Columbus::SearchParameters const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::match(Columbus::WordList const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::match(Columbus::WordList const&, Columbus::SearchParameters const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::match(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::Matcher()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Matcher::~Matcher()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::addText(Columbus::Word const&, char const*)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::addText(Columbus::Word const&, Columbus::WordList const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::addText(Columbus::Word const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::Document(Columbus::Document const&)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::Document::Document(unsigned long)@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::Document::Document(unsigned int)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::Document(Columbus::Document const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::~Document()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::operator=(Columbus::Document const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::addWord(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList(Columbus::WordList&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList(Columbus::WordList const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList(Columbus::WordList&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList(Columbus::WordList const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::WordList()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::~WordList()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::operator=(Columbus::WordList&&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::operator=(Columbus::WordList const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::getID(Columbus::Word const&)@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::WordStore()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::~WordStore()@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ErrorValues::getSubstituteError(unsigned short, unsigned short) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::IndexMatches::getMatchError(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::IndexMatches::getMatchError(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexMatches::size() const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::IndexMatches::getMatch(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::IndexMatches::getMatch(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::IndexMatches::getQuery(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::IndexMatches::getQuery(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::IndexWeights::getWeight(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::MatchResults::getRelevancy(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::MatchResults::getRelevancy(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::MatchResults::getDocumentID(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::MatchResults::getDocumentID(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::MatchResults::size() const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::ResultFilter::numSubTerms(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::ResultFilter::numSubTerms(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::ResultFilter::getWord(unsigned long, unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::ResultFilter::getWord(unsigned int, unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::ResultFilter::getField(unsigned long, unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::ResultFilter::getField(unsigned int, unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::ResultFilter::numTerms() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::hasWord(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::maxCount() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::numNodes() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::numWords() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::findWords(Columbus::Word const&, Columbus::ErrorValues const&, int, Columbus::IndexMatches&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::LevenshteinIndex::wordCount(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::getDynamicError(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::getResultFilter() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::isNonsearchingField(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::looseningIterations() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::SearchParameters::isDynamic() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::hash() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::join(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::asUtf8[abi:cxx11]() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::toUtf8(char*, unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator==(char const*) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator==(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator==(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator[](unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator<(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator!=(char const*) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator!=(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Word::operator!=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::Corpus::getDocument(unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::Corpus::getDocument(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Corpus::size() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::fieldCount() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::getFieldNames(Columbus::WordList&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::totalWordCount(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::getID() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::getText(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::Document::wordCount(Columbus::Word const&, Columbus::Word) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::size() const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::operator==(Columbus::WordList const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=amd64 arm64 ppc64el s390x riscv64)"Columbus::WordList::operator[](unsigned long) const@Base" 1.1.0+14.04.20140325.3
+ (c++|arch=i386 armhf powerpc)"Columbus::WordList::operator[](unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordList::operator!=(Columbus::WordList const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::getWord(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::hasWord(Columbus::Word const&) const@Base" 1.1.0+14.04.20140325.3
+ (c++)"Columbus::WordStore::hasWord(unsigned int) const@Base" 1.1.0+14.04.20140325.3
+ col_corpus_add_document@Base 1.1.0+14.04.20140325.3
+ col_corpus_delete@Base 1.1.0+14.04.20140325.3
+ col_corpus_new@Base 1.1.0+14.04.20140325.3
+ col_document_add_text@Base 1.1.0+14.04.20140325.3
+ col_document_delete@Base 1.1.0+14.04.20140325.3
+ col_document_get_id@Base 1.1.0+14.04.20140325.3
+ col_document_new@Base 1.1.0+14.04.20140325.3
+ col_error_values_add_standard_errors@Base 1.1.0+14.04.20140325.3
+ col_error_values_set_substring_mode@Base 1.1.0+14.04.20140325.3
+ col_index_weights_get_weight@Base 1.1.0+14.04.20140325.3
+ col_index_weights_set_weight@Base 1.1.0+14.04.20140325.3
+ col_match_results_delete@Base 1.1.0+14.04.20140325.3
+ col_match_results_get_id@Base 1.1.0+14.04.20140325.3
+ col_match_results_get_relevancy@Base 1.1.0+14.04.20140325.3
+ col_match_results_new@Base 1.1.0+14.04.20140325.3
+ col_match_results_size@Base 1.1.0+14.04.20140325.3
+ col_matcher_delete@Base 1.1.0+14.04.20140325.3
+ col_matcher_get_error_values@Base 1.1.0+14.04.20140325.3
+ col_matcher_get_index_weights@Base 1.1.0+14.04.20140325.3
+ col_matcher_index@Base 1.1.0+14.04.20140325.3
+ col_matcher_match@Base 1.1.0+14.04.20140325.3
+ col_matcher_new@Base 1.1.0+14.04.20140325.3
+ col_word_as_utf8@Base 1.1.0+14.04.20140325.3
+ col_word_delete@Base 1.1.0+14.04.20140325.3
+ col_word_length@Base 1.1.0+14.04.20140325.3
+ col_word_new@Base 1.1.0+14.04.20140325.3

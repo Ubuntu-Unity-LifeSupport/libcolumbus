@@ -1,0 +1,22 @@
+Description: Fix FTBFS with python 3.10
+ The cmake.python file in this package is only allowing for
+ single digit python minor versions. Update this to allow
+ for double digit minor versions
+Author: William 'jawn-smith' Wilson <jawn-smith@ubuntu.com>
+Origin: Ubuntu
+Last-Update: 2022-02-09
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: libcolumbus-1.1.0+15.10.20150806/cmake/python.cmake
+===================================================================
+--- libcolumbus-1.1.0+15.10.20150806.orig/cmake/python.cmake
++++ libcolumbus-1.1.0+15.10.20150806/cmake/python.cmake
+@@ -20,7 +20,7 @@
+     message(STATUS "Python dev libraries not found, not building Python bindings.")
+   else()
+     string(SUBSTRING ${PYTHONLIBS_VERSION} 0 1 PYTHON_MAJOR)
+-    string(SUBSTRING ${PYTHONLIBS_VERSION} 2 1 PYTHON_MINOR)
++    string(SUBSTRING ${PYTHONLIBS_VERSION} 2 2 PYTHON_MINOR)
+     message(STATUS "Found Python version ${PYTHON_MAJOR}.${PYTHON_MINOR}.")
+     if(NOT use_python2)
+       execute_process(COMMAND ${CMAKE_SOURCE_DIR}/cmake/pysoabi.py OUTPUT_VARIABLE pysoabi OUTPUT_STRIP_TRAILING_WHITESPACE)
