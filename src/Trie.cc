@@ -41,6 +41,8 @@
 #include<string>
 #include<vector>
 #include<cassert>
+#include<cstdint>
+#include<memory>
 
 using namespace std;
 
@@ -65,44 +67,57 @@ struct TrieNode {
 };
 
 struct TriePrivate {
-    FILE *f;
-    char *map;
-    TrieHeader *h;
-    TrieOffset root;
+    FILE *f = nullptr;
+    char *map = nullptr; // never MAP_FAILED
+    TrieOffset mapSize = 0; // the size of map, kept outside it
+    TrieHeader *h = nullptr;
+    TrieOffset root = 0;
+
+    ~TriePrivate() {
+        // The mapping keeps the deleted temporary file and its pages alive
+        // until it is unmapped, even after the file is closed.
+        if(map && munmap(map, mapSize) != 0) {
+            fprintf(stderr, "Trie: munmap failed: %s\n", strerror(errno));
+        }
+        if(f) {
+            fclose(f);
+        }
+    }
 };
 
 Trie::Trie() {
-    p = new TriePrivate();
+    // Owned by holder until the Trie is complete: a throw below never runs
+    // ~Trie, and holder releases the file and the mapping.
+    unique_ptr<TriePrivate> holder(new TriePrivate());
+    p = holder.get();
     p->f = tmpfile();
     if(!p->f) {
         string msg("Could not create temporary file: ");
         msg += strerror(errno);
         throw runtime_error(msg);
     }
-    p->map = nullptr;
     expand();
     p->h->firstFree = sizeof(TrieHeader);
     p->root = p->h->firstFree;
     p->h->numWords = 0;
     addNewNode(0);
+    holder.release();
 }
 
 
 Trie::~Trie() {
-    fclose(p->f);
     delete p;
 }
 
+// The old mapping stays valid until the new one exists, so a failure leaves
+// the Trie as it was. The file only grows: pages past the mapping are unused.
 void Trie::expand() {
     TrieOffset newSize;
-    if(p->map) {
-        TrieOffset oldSize = p->h->totalSize;
-        newSize = oldSize*2;
-        if(munmap(p->map, oldSize) != 0) {
-            string err = "Munmap failed: ";
-            err += strerror(errno);
-            throw runtime_error(err);
+    if(p->mapSize) {
+        if(p->mapSize > UINT32_MAX / 2) {
+            throw runtime_error("Trie too large");
         }
+        newSize = p->mapSize*2;
     } else {
         newSize = 1024;
     }
@@ -111,13 +126,18 @@ void Trie::expand() {
         err += strerror(errno);
         throw runtime_error(err);
     }
-    p->map = (char*)mmap(NULL, newSize, PROT_READ | PROT_WRITE, MAP_SHARED,
+    char *newMap = (char*)mmap(NULL, newSize, PROT_READ | PROT_WRITE, MAP_SHARED,
                   fileno(p->f), 0);
-    if(p->map == MAP_FAILED) {
+    if(newMap == MAP_FAILED) {
         string err = "MMap failed: ";
         err += strerror(errno);
         throw runtime_error(err);
     }
+    if(p->map && munmap(p->map, p->mapSize) != 0) {
+        fprintf(stderr, "Trie: munmap failed: %s\n", strerror(errno));
+    }
+    p->map = newMap;
+    p->mapSize = newSize;
     if(madvise(p->map, newSize, MADV_RANDOM | MADV_WILLNEED) != 0) {
         fprintf(stderr, "Problem with madvise: %s\n", strerror(errno));
     }
