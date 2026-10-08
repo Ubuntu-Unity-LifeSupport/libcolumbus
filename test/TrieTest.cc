@@ -20,6 +20,8 @@
 #include "Word.hh"
 #include "Trie.hh"
 #include <cassert>
+#include <cstdio>
+#include <cstring>
 
 using namespace Columbus;
 
@@ -64,10 +66,83 @@ void testHas() {
     assert(!t.hasWord(w4));
 }
 
+/* Deleted files this process has mapped: their count and their total size.
+ * A Trie maps a deleted temporary file; once destroyed, it must leave none. */
+struct Deleted {
+    int count;
+    unsigned long bytes;
+};
+
+static Deleted deletedMappings() {
+    FILE *maps = fopen("/proc/self/maps", "r");
+    assert(maps); // a test that cannot see the mappings must not pass
+    Deleted d = {0, 0};
+    char line[4096];
+    while(fgets(line, sizeof(line), maps)) {
+        size_t len = strlen(line);
+        if(len && line[len-1] == '\n')
+            line[--len] = '\0';
+        const char *suffix = " (deleted)";
+        size_t slen = strlen(suffix);
+        if(len >= slen && strcmp(line + len - slen, suffix) == 0) {
+            unsigned long start = 0, end = 0;
+            int fields = sscanf(line, "%lx-%lx", &start, &end);
+            assert(fields == 2);
+            d.count++;
+            d.bytes += end - start;
+        }
+    }
+    fclose(maps);
+    return d;
+}
+
+void testNoMappingLeft() {
+    Deleted before = deletedMappings();
+    {
+        Trie t;
+        Word w("abc");
+        t.insertWord(w, 1);
+        Deleted alive = deletedMappings();
+        assert(alive.count == before.count + 1);
+    }
+    assert(deletedMappings().count == before.count);
+    for(int i = 0; i < 50; i++) {
+        Trie t;
+        Word w("abc");
+        t.insertWord(w, 1);
+    }
+    assert(deletedMappings().count == before.count);
+}
+
+void testNoMappingLeftAfterExpand() {
+    Deleted before = deletedMappings();
+    {
+        Trie t;
+        char text[3] = {0, 0, 0};
+        WordID id = 1;
+        for(char a = 'a'; a <= 'z'; a++) {
+            for(char b = 'a'; b <= 'z'; b++) {
+                text[0] = a;
+                text[1] = b;
+                Word w(text);
+                t.insertWord(w, id++);
+            }
+        }
+        Deleted alive = deletedMappings();
+        assert(alive.count == before.count + 1);
+        assert(alive.bytes - before.bytes > 1024); // expand() ran
+    }
+    Deleted after = deletedMappings();
+    assert(after.count == before.count);
+    assert(after.bytes == before.bytes);
+}
+
 int main(int /*argc*/, char **/*argv*/) {
     // Move basic tests from levtrietest here.
     testWordBuilding();
     testHas();
+    testNoMappingLeft();
+    testNoMappingLeftAfterExpand();
     return 0;
 }
 

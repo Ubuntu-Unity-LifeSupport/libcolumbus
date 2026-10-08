@@ -25,6 +25,8 @@
 #include "MatchResults.hh"
 #include "ColumbusHelpers.hh"
 #include <cassert>
+#include <cstdio>
+#include <cstring>
 
 using namespace Columbus;
 using namespace std;
@@ -290,8 +292,61 @@ void testPerfect() {
     assert(matches.getDocumentID(0) == correct);
 }
 
+/* Deleted files this process has mapped (each Trie maps a deleted
+ * temporary file). */
+static int deletedMappings() {
+    FILE *maps = fopen("/proc/self/maps", "r");
+    assert(maps); // a test that cannot see the mappings must not pass
+    int count = 0;
+    char line[4096];
+    while(fgets(line, sizeof(line), maps)) {
+        if(strstr(line, " (deleted)\n"))
+            count++;
+    }
+    fclose(maps);
+    return count;
+}
+
+/* Two fields: one WordStore Trie and one LevenshteinIndex Trie per field,
+ * three Tries per indexed Matcher, as in hud-service's per-query Matcher. */
+static Corpus * twoFieldCorpus() {
+    Corpus *c = new Corpus();
+    Word title("title"), name("name");
+    WordList t1, n1, t2, n2;
+    t1.addWord(Word("save"));
+    n1.addWord(Word("file"));
+    t2.addWord(Word("print"));
+    n2.addWord(Word("document"));
+    Document d1(1), d2(2);
+    d1.addText(title, t1);
+    d1.addText(name, n1);
+    d2.addText(title, t2);
+    d2.addText(name, n2);
+    c->addDocument(d1);
+    c->addDocument(d2);
+    return c;
+}
+
+void testNoMappingLeft() {
+    Corpus *c = twoFieldCorpus();
+    int before = deletedMappings();
+    {
+        Matcher m;
+        m.index(*c);
+        assert(deletedMappings() == before + 3);
+    }
+    assert(deletedMappings() == before);
+    for(int i = 0; i < 20; i++) {
+        Matcher m;
+        m.index(*c);
+    }
+    assert(deletedMappings() == before);
+    delete c;
+}
+
 int main(int /*argc*/, char **/*argv*/) {
     try {
+        testNoMappingLeft();
         testMatcher();
         testRelevancy();
         testMultiWord();
