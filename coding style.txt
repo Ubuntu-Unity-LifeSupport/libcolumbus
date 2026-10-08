@@ -1,0 +1,9 @@
+Code style of the Columbus project
+
+- functions must be short, anything bigger than one screen must be split
+- indentation is 4 spaces, tabs are forbidden
+- opening brace always on the same line
+- class header files must be minimal
+    - no STL #includes because they slow down compilation massively,
+      the only exception is string, which is necessary for interoperation
+    - forward declarations instead of #includes

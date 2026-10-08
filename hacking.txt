@@ -1,0 +1,63 @@
+A quick overview of the internals of Columbus
+
+
+Data model
+
+The Columbus library has a very simple view of the world.  The basic
+unit of data it deals with is the Corpus. A corpus is a collection of
+Documents. A document is a named collection of texts and an
+ID. Columbus indexes these texts and allows the user to search through
+them efficiently.
+
+To make thing more clear, let's examine a simple music database. In it
+every song is a document. A corpus with three songs could look like
+this:
+
+song0
+  Author: Britney Spears
+  Name: Toxic
+  Album: In the Zone
+
+song1
+  Author: Micheal Jackson
+  Name: Billie Jean
+  Album: Thriller
+
+song2
+  Author: The Beatles
+  Name: Lucy in the Sky with Diamonds
+  Album: Yellow Submarine Soundtrack
+
+Did you notice the typo? That's intentional. Very, very few real world
+data sources are clean. Errors like this happen all the time, and it
+is the job of the search engine to deal with them.
+
+
+Error tolerant word matching
+
+Columbus is built around a data structure that efficiently computes
+the Damerau-Levenshtein distance for a set of words. For details see
+
+http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
+
+The matcher allows for custom errors, so for example the replacement
+error a->ä could be less than the standard replacement
+error. Additionally, the replacement error d->c could be set lower
+because the two letters are close to each other on the keyboard.
+
+Multiple letter replacements, e.g. the german ß -> ss are not
+supported yet.
+
+The actual search algorithm is quite straightforward. First the query
+term is split into search words. Then all words in the data that are
+within a certain error from the search terms is found.
+
+We then look at these terms and see which documents contain them. For
+each match we increment the relevancy of the given document. The more
+"important" the word the more we increment the relevancy. The smaller
+the word match error was, the bigger the increase in relevancy. The
+user can specify relative weights for different fields. In the music
+example, adding the weight of the song name is probably a good idea.
+
+Once all words have been processed, we just sort the document by
+relevancy and we have our result set.

@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @pkg-name@
+Description: Error tolerant matcher
+Version: @SO_VERSION@
+Libs: -L${libdir} -l@COL_LIB_BASENAME@
+Cflags: -I${includedir}

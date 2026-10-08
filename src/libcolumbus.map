@@ -1,0 +1,122 @@
+{
+global:
+    extern "C++" {
+        "Columbus::Matcher::Matcher()";
+        "Columbus::Matcher::~Matcher()";
+        Columbus::Matcher::match*;
+        Columbus::Matcher::onlineMatch*;
+        Columbus::Matcher::get*;
+        Columbus::Matcher::operator*;
+        Columbus::Matcher::index*;
+        Columbus::Word::Word*;
+        "Columbus::Word::~Word()";
+        "Columbs::Word::length()";
+        "Columbus::Word::asUtf8[abi:cxx11]() const";
+        Columbus::Word::toUtf8*;
+        Columbus::Word::join*;
+        Columbus::Word::operator*;
+        "Columbus::Word::hash() const";
+        Columbus::WordStore*;
+        Columbus::Corpus*;
+        Columbus::WordList*;
+        Columbus::Document*;
+        Columbus::MatchResults::MatchResults*;
+        "Columbus::MatchResults::~MatchResults()";
+        Columbus::MatchResults::operator*;
+        Columbus::MatchResults::add*;
+        Columbus::MatchResults::copyResult*;
+        "Columbus::MatchResults::size() const";
+        Columbus::MatchResults::get*;
+
+        "Columbus::ErrorValues::ErrorValues()";
+        "Columbus::ErrorValues::~ErrorValues()";
+        "Columbus::ErrorValues::getInsertionError() const";
+        "Columbus::ErrorValues::getDeletionError() const";
+        "Columbus::ErrorValues::getEndDeletionError() const";
+        Columbus::ErrorValues::getStartInsertionError*;
+        "Columbus::ErrorValues::getTransposeError() const";
+        "Columbus::ErrorValues::setInsertionError(const int)";
+        "Columbus::ErrorValues::setDeletionError(const int)";
+        "Columbus::ErrorValues::setEndDeletionError(const int)";
+        "Columbus::ErrorValues::setStartInsertionError(const int)";
+        "Columbus::ErrorValues::setTransposeError(const int)";
+        Columbus::ErrorValues::setSubstringStartLimit*;
+        Columbus::ErrorValues::getSubstituteError*;
+        "Columbus::ErrorValues::getDefaultError()";
+        "Columbus::ErrorValues::getDefaultGroupError()";
+        "Columbus::ErrorValues::getDefaultTypoError()";
+        "Columbus::ErrorValues::getSubstringDefaultEndDeletionError()";
+        "Columbus::ErrorValues::getSubstringDefaultStartInsertionError()";
+        Columbus::ErrorValues::setError*;
+        Columbus::ErrorValues::setGroupError*;
+        Columbus::ErrorValues::addAccents*;
+        "Columbus::ErrorValues::addKeyboardErrors()";
+        "Columbus::ErrorValues::addNumberpadErrors()";
+        "Columbus::ErrorValues::addStandardErrors()";
+        Columbus::ErrorValues::isInGroup*;
+        "Columbus::ErrorValues::clearErrors()";
+        "Columbus::ErrorValues::setSubstringMode()";
+        
+        "Columbus::IndexMatches::IndexMatches()";
+        "Columbus::IndexMatches::~IndexMatches()";
+
+        "Columbus::IndexMatches::size() const";
+        Columbus::IndexMatches::getMatch*;
+        Columbus::IndexMatches::getQuery*;
+        Columbus::IndexMatches::getMatchError*;
+        "Columbus::IndexMatches::clear()";
+
+        Columbus::IndexWeights*;
+        "Columbus::LevenshteinIndex::LevenshteinIndex()";
+        "Columbus::LevenshteinIndex::~LevenshteinIndex()";
+        "Columbus::LevenshteinIndex::getDefaultError()";
+        Columbus::LevenshteinIndex::insertWord*;
+        Columbus::LevenshteinIndex::hasWord*;
+        Columbus::LevenshteinIndex::findWords*;
+        Columbus::LevenshteinIndex::wordCount*;
+        "Columbus::LevenshteinIndex::maxCount() const";
+        "Columbus::LevenshteinIndex::numNodes() const";
+        "Columbus::LevenshteinIndex::numWords() const";
+        Columbus::SearchParameters*;
+        Columbus::ResultFilter*;
+        "Columbus::hiresTimestamp()";
+        "Columbus::splitToWords(char const*)";
+    };
+    col_word_new;
+    col_word_delete;
+    col_word_length;
+    col_word_as_utf8;
+
+    col_document_new;
+    col_document_delete;
+    col_document_get_id;
+    col_document_add_text;
+
+    col_matcher_new;
+    col_matcher_delete;
+    col_matcher_index;
+    col_matcher_match;
+    col_matcher_get_error_values;
+    col_matcher_get_index_weights;
+
+    col_match_results_new;
+    col_match_results_delete;
+    col_match_results_size;
+    col_match_results_get_id;
+    col_match_results_get_relevancy;
+
+    col_corpus_new;
+    col_corpus_delete;
+    col_corpus_add_document;
+
+    col_index_weights_set_weight;
+    col_index_weights_get_weight;
+
+    col_error_values_add_standard_errors;
+    col_error_values_set_substring_mode;
+
+local:
+    extern "C++" {
+        *;
+    };
+};

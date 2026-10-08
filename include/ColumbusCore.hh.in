@@ -1,0 +1,95 @@
+/*
+ * Copyright (C) 2012 Canonical, Ltd.
+ *
+ * Authors:
+ *    Jussi Pakkanen <jussi.pakkanen@canonical.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * This file contains the most basic definitions in Columbus.
+ * Almost every single source file includes this, so it must be fast.
+ * It must work as such when included either from C or C++.
+ *
+ */
+
+#ifndef COLUMBUSCORE_H
+#define COLUMBUSCORE_H
+
+
+/* Macros that set symbol visibilities in shared libraries properly.
+ * Adapted from http://gcc.gnu.org/wiki/Visibility
+ */
+
+#if defined _WIN32 || defined __CYGWIN__
+  #ifdef BUILDING_COLUMBUS
+    #define COL_PUBLIC __declspec(dllexport)
+  #else
+    #define COL_PUBLIC __declspec(dllimport)
+  #endif
+#else
+  #if defined __GNUC__
+    #define COL_PUBLIC __attribute__ ((visibility("default")))
+  #else
+    #pragma message ("Compiler does not support symbol visibility.")
+    #define COL_PUBLIC
+  #endif
+#endif
+
+#define UNUSED_VAR __attribute__ ((unused))
+
+#ifdef __cplusplus
+  #include <cstddef>
+  #include <cstdint>
+#else
+  #include<stddef.h>
+  #include <stdint.h>
+#endif
+
+#ifdef __cplusplus
+  #define COL_NAMESPACE_START namespace Columbus {
+  #define COL_NAMESPACE_END }
+#endif
+
+#ifdef DEBUG_MESSAGES
+  #ifdef __cplusplus
+    #include<cstdio>
+  #else
+    #include<stdio.h>
+  #endif
+  #define debugMessage(...) printf(__VA_ARGS__);
+#else
+  #define debugMessage(...)
+#endif
+
+
+#define COLUMBUS_VERSION_STRING "${SO_VERSION}"
+#define COLUMBUS_ABI_VERSION ${ABI_VERSION}
+#define COLUMBUS_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}"
+#define COLUMBUS_DATADIR COLUMBUS_INSTALL_PREFIX "/share/${COL_LIB_BASENAME}${SO_VERSION_MAJOR}/"
+
+typedef ${LETTER_TYPE} Letter;
+#define INTERNAL_ENCODING "${INTERNAL_ENCODING}"
+
+typedef uint32_t WordID;
+#define INVALID_WORDID ((WordID)-1)
+
+typedef uintptr_t DocumentID;
+#define INVALID_DOCID ((DocumentID)-1)
+
+typedef uint32_t TrieOffset;
+
+#cmakedefine HAS_SPARSE_HASH
+
+#endif
