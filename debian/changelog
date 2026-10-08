@@ -7,6 +7,8 @@ libcolumbus (1.1.0+15.10.20150806-0ubuntu39+unity1) resolute; urgency=medium
     0.4 MB per query. expand() keeps the old mapping until the new one
     exists and refuses to grow past 2 GiB; the constructor no longer leaks
     when it throws. Tests in TrieTest and MatcherTest (UNITY-20261008-013).
+  * CMakeLists.txt: cmake_minimum_required 3.10; resolute's CMake 4 no
+    longer configures projects that ask for less than 3.5.
 
  -- NeiroNext <mihail.rozshko@gmail.com>  Thu, 08 Oct 2026 22:32:42 +0000
 
