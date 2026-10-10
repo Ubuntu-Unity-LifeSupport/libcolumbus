@@ -1,3 +1,9 @@
+libcolumbus (1.1.0+15.10.20150806-0ubuntu39+unity2) resolute; urgency=medium
+
+  * No-change rebuild to exercise the archive signer's routine policy.
+
+ -- NeiroNext <mihail.rozshko@gmail.com>  Sat, 10 Oct 2026 16:56:57 +0000
+
 libcolumbus (1.1.0+15.10.20150806-0ubuntu39+unity1) resolute; urgency=medium
 
   * Trie: unmap the temporary file when the Trie is destroyed. ~Trie closed
